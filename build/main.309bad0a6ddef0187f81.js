@@ -16,7 +16,7 @@
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar test_1 = __importDefault(__webpack_require__(/*! ./test */ \"./src/test.ts\"));\nconsole.log((0, test_1.default)(12));\n\n\n//# sourceURL=webpack://ulbi_course/./src/index.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar test_1 = __importDefault(__webpack_require__(/*! ./test */ \"./src/test.ts\"));\nconsole.log((0, test_1.default)(228));\n\n\n//# sourceURL=webpack://course/./src/index.ts?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
   \*********************/
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar test = function (param) {\n    console.log('test string log');\n    return param;\n};\nexports[\"default\"] = test;\n\n\n//# sourceURL=webpack://ulbi_course/./src/test.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar test = function (param) {\n    console.log('test string log');\n    return param;\n};\nexports[\"default\"] = test;\n\n\n//# sourceURL=webpack://course/./src/test.ts?");
 
 /***/ })
 
