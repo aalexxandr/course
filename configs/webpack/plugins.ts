@@ -1,11 +1,13 @@
 import { WebpackPluginInstance, ProgressPlugin } from 'webpack';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
-import { IPaths } from './types';
+import { IBuildOptions } from './types';
 
-const webpackPlugins = (path: IPaths): Array<WebpackPluginInstance> => [
+const webpackPlugins = ({
+	paths,
+}: IBuildOptions): Array<WebpackPluginInstance> => [
 	new ProgressPlugin(),
 	new HTMLWebpackPlugin({
-		template: path.template,
+		template: paths.template,
 	}),
 ];
 

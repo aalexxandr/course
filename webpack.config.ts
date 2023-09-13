@@ -1,7 +1,8 @@
-import webpack from 'webpack';
+import webpack, { Configuration } from 'webpack';
 import webpackConfig from './configs/webpack';
-import { IPaths } from './configs/webpack/types';
+import { IEnv, IPaths } from './configs/webpack/types';
 import path from 'path';
+import 'webpack-dev-server';
 
 const paths: IPaths = {
 	entry: path.resolve(__dirname, 'src', 'index.ts'),
@@ -9,9 +10,14 @@ const paths: IPaths = {
 	template: path.resolve(__dirname, 'public', 'index.html'),
 };
 
-const config: webpack.Configuration = webpackConfig({
-	mode: 'development',
-	paths,
-});
+export default (env: IEnv): Configuration => {
+	const mode = env.MODE || 'development';
+	const isDev = mode === 'development';
 
-export default config;
+	return webpackConfig({
+		mode,
+		paths,
+		isDev,
+		port: env.PORT,
+	});
+};

@@ -3,10 +3,17 @@ interface IPaths {
 	build: string;
 	template: string;
 }
-
+type TMode = 'development' | 'production';
 interface IBuildOptions {
-	mode: 'development' | 'production';
+	mode: TMode;
 	paths: IPaths;
+	isDev: boolean;
+	port: number;
 }
 
-export { IBuildOptions, IPaths };
+interface IEnv {
+	MODE: TMode;
+	PORT: number;
+}
+
+export { IBuildOptions, IPaths, IEnv };
