@@ -12,12 +12,12 @@ const webpackConfig = (options: IBuildOptions): webpack.Configuration => {
 		mode,
 		entry: paths.entry,
 		output: {
-			filename: '[name].[contenthash].js',
+			filename: '[name].[contenthash:5].js',
 			path: paths.build,
 			clean: true,
 		},
 		module: {
-			rules: webpackLoaders(),
+			rules: webpackLoaders(options),
 		},
 		resolve: webpackResolves(),
 		plugins: webpackPlugins(options),

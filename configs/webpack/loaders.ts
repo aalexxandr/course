@@ -2,7 +2,9 @@ import { RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { IBuildOptions } from './types';
 
-const webpackLoaders = (): Array<RuleSetRule> => {
+const webpackLoaders = (options: IBuildOptions): Array<RuleSetRule> => {
+	const { isDev } = options;
+
 	const typescriptLoader = {
 		test: /\.tsx?$/,
 		use: 'ts-loader',
@@ -11,7 +13,22 @@ const webpackLoaders = (): Array<RuleSetRule> => {
 
 	const sassLoader = {
 		test: /\.s[ac]ss$/i,
-		use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+		use: [
+			MiniCssExtractPlugin.loader,
+			{
+				loader: 'css-loader',
+				options: {
+					modules: {
+						auto: (resourcePath: string) =>
+							Boolean(resourcePath.includes('.module.')),
+						localIdentName: isDev
+							? '[path][name]__[local]--[hash:base64:5]'
+							: '[hash:base64:5]',
+					},
+				},
+			},
+			'sass-loader',
+		],
 	};
 
 	return [typescriptLoader, sassLoader];
