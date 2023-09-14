@@ -5,7 +5,7 @@ import path from 'path';
 import 'webpack-dev-server';
 
 const paths: IPaths = {
-	entry: path.resolve(__dirname, 'src', 'index.ts'),
+	entry: path.resolve(__dirname, 'src', 'index.tsx'),
 	build: path.resolve(__dirname, 'build'),
 	template: path.resolve(__dirname, 'public', 'index.html'),
 };

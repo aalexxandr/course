@@ -1,6 +1,7 @@
 import { WebpackPluginInstance, ProgressPlugin } from 'webpack';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import { IBuildOptions } from './types';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const webpackPlugins = ({
 	paths,
@@ -8,6 +9,9 @@ const webpackPlugins = ({
 	new ProgressPlugin(),
 	new HTMLWebpackPlugin({
 		template: paths.template,
+	}),
+	new MiniCssExtractPlugin({
+		filename: 'css/[name].[contenthash:8].css',
 	}),
 ];
 
