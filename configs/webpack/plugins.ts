@@ -12,6 +12,7 @@ const webpackPlugins = ({
 	}),
 	new MiniCssExtractPlugin({
 		filename: 'css/[name].[contenthash:5].css',
+		chunkFilename: 'css/[name].[contenthash:5].css',
 	}),
 ];
 

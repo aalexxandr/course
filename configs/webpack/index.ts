@@ -3,7 +3,7 @@ import { IBuildOptions } from './types';
 import webpackLoaders from './loaders';
 import webpackResolves from './resolves';
 import webpackPlugins from './plugins';
-import devServerTest from './devServer';
+import webpackDevServer from './devServer';
 
 const webpackConfig = (options: IBuildOptions): webpack.Configuration => {
 	const { mode, paths, isDev } = options;
@@ -22,7 +22,7 @@ const webpackConfig = (options: IBuildOptions): webpack.Configuration => {
 		resolve: webpackResolves(),
 		plugins: webpackPlugins(options),
 		devtool: isDev ? 'inline-source-map' : undefined,
-		devServer: isDev ? devServerTest(options) : undefined,
+		devServer: isDev ? webpackDevServer(options) : undefined,
 	};
 };
 

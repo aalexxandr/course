@@ -1,9 +1,10 @@
 import type { Configuration } from 'webpack-dev-server';
 import { IBuildOptions } from './types';
 
-const devServer = ({ port }: IBuildOptions): Configuration => ({
+const webpackDevServer = ({ port }: IBuildOptions): Configuration => ({
 	port,
 	open: true,
+	historyApiFallback: true,
 });
 
-export default devServer;
+export default webpackDevServer;
