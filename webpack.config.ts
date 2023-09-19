@@ -8,6 +8,7 @@ const paths: IPaths = {
 	entry: path.resolve(__dirname, 'src', 'index.tsx'),
 	build: path.resolve(__dirname, 'build'),
 	template: path.resolve(__dirname, 'public', 'index.html'),
+	src: path.resolve(__dirname, 'src'),
 };
 
 export default (env: IEnv): Configuration => {

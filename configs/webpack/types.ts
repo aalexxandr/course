@@ -2,6 +2,7 @@ interface IPaths {
 	entry: string;
 	build: string;
 	template: string;
+	src: string;
 }
 type TMode = 'development' | 'production';
 interface IBuildOptions {

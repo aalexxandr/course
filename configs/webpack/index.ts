@@ -19,7 +19,7 @@ const webpackConfig = (options: IBuildOptions): webpack.Configuration => {
 		module: {
 			rules: webpackLoaders(options),
 		},
-		resolve: webpackResolves(),
+		resolve: webpackResolves(options),
 		plugins: webpackPlugins(options),
 		devtool: isDev ? 'inline-source-map' : undefined,
 		devServer: isDev ? webpackDevServer(options) : undefined,
