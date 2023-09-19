@@ -1,9 +1,5 @@
 import { useContext } from 'react';
-import {
-	ETheme,
-	LOCAL_STORAGE_THEME_KEY,
-	ThemeContext,
-} from '../../contexts/theme/ThemeContext';
+import { ETheme, LOCAL_STORAGE_THEME_KEY, ThemeContext } from './ThemeContext';
 import { IUseTheme } from './types';
 
 export const useTheme = (): IUseTheme => {
