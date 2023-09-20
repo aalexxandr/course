@@ -1,15 +1,20 @@
+import { ThemePicker } from 'widgets/ThemePicker';
 import cls from './style.module.scss';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { Link } from 'shared/ui/Link';
 
 export function Navbar() {
 	return (
 		<div className={cls.navbar}>
-			<AppLink to={'/'} className={cls.navbarLink}>
-				Main
-			</AppLink>
-			<AppLink to='/about' className={cls.navbarLink}>
-				About
-			</AppLink>
+			<ThemePicker />
+
+			<div>
+				<Link to={'/'} className={cls.navbarLink}>
+					Main
+				</Link>
+				<Link to='/about' className={cls.navbarLink}>
+					About
+				</Link>
+			</div>
 		</div>
 	);
 }
