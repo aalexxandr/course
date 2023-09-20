@@ -3,7 +3,6 @@ import { IBuildOptions } from './types';
 
 const webpackDevServer = ({ port }: IBuildOptions): Configuration => ({
 	port,
-	open: true,
 	historyApiFallback: true,
 });
 
