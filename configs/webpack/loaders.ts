@@ -23,7 +23,7 @@ const webpackLoaders = ({ isDev }: IBuildOptions): Array<RuleSetRule> => {
 		],
 	};
 
-	const sassLoader = {
+	const cssLoader = {
 		test: /\.s[ac]ss$/i,
 		use: [
 			isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -43,7 +43,7 @@ const webpackLoaders = ({ isDev }: IBuildOptions): Array<RuleSetRule> => {
 		],
 	};
 
-	return [typescriptLoader, sassLoader, svgLoader, fileLoader];
+	return [fileLoader, svgLoader, typescriptLoader, cssLoader];
 };
 
 export default webpackLoaders;
