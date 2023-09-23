@@ -26,7 +26,7 @@ const webpackLoaders = ({ isDev }: IBuildOptions): Array<RuleSetRule> => {
 	const sassLoader = {
 		test: /\.s[ac]ss$/i,
 		use: [
-			MiniCssExtractPlugin.loader,
+			isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
 			{
 				loader: 'css-loader',
 				options: {
