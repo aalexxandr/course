@@ -3,6 +3,7 @@ import cls from './style.module.scss';
 import { addProperties } from 'shared/lib/addProperties';
 import { Button } from 'shared/ui/Button';
 import { ThemePicker } from 'widgets/ThemePicker';
+import { LanguagePicker } from 'widgets/LanguagePicker';
 
 export function Sidebar() {
 	const [isClosed, setIsClosed] = useState(false);
@@ -16,6 +17,7 @@ export function Sidebar() {
 			<Button onClick={onToggleSidebar}>toggle</Button>
 			<div className={cls.switchers}>
 				<ThemePicker />
+				<LanguagePicker />
 			</div>
 		</div>
 	);
