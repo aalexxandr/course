@@ -6,7 +6,7 @@ interface IUseTheme {
 }
 
 interface IThemeContext {
-	theme?: ETheme;
-	setTheme?: (theme: ETheme) => void;
+	theme: ETheme;
+	setTheme: (theme: ETheme) => void;
 }
 export { IUseTheme, IThemeContext };

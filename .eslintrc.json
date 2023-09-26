@@ -1,0 +1,40 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "react", "react-hooks"],
+	"rules": {
+		"@typescript-eslint/explicit-function-return-type": [
+			"error",
+			{
+				"allowExpressions": true
+			}
+		],
+		"max-len": ["warn", { "code": 80 }],
+		"import/prefer-default-export": "off",
+		"react/prop-types": "off",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

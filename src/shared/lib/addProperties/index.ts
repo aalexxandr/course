@@ -1,10 +1,10 @@
 export const addProperties = (
-	properties: Array<string>,
+	properties: Array<string | undefined>,
 	booProperties: Record<string, boolean> = {}
 ): string =>
 	[
 		...properties.filter(Boolean),
 		Object.entries(booProperties)
-			.filter(([key, value]) => Boolean(value))
+			.filter(([, value]) => Boolean(value))
 			.map(([property]) => property),
 	].join(' ');

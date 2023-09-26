@@ -3,8 +3,9 @@ import ThemeIcon from 'shared/assets/icons/theme.svg';
 import { Button } from 'shared/ui/Button';
 import cls from './style.module.scss';
 import { addProperties } from 'shared/lib/addProperties';
+import { FC } from 'react';
 
-export function ThemePicker() {
+export const ThemePicker: FC = () => {
 	const { toggleTheme, theme } = useTheme();
 	const isLightTheme = theme === ETheme.LIGHT;
 

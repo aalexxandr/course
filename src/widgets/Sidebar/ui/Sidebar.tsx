@@ -5,15 +5,17 @@ import { Button } from 'shared/ui/Button';
 import { ThemePicker } from 'widgets/ThemePicker';
 import { LanguagePicker } from 'widgets/LanguagePicker';
 
-export function Sidebar() {
+export const Sidebar = (): JSX.Element => {
 	const [isClosed, setIsClosed] = useState(false);
 
-	const onToggleSidebar = () => {
+	const onToggleSidebar = (): void => {
 		setIsClosed(prev => !prev);
 	};
 
 	return (
-		<div className={addProperties([cls.sidebar], { [cls.closed]: isClosed })}>
+		<div className={
+			addProperties([cls.sidebar], { [cls.closed]: isClosed })
+		}>
 			<Button onClick={onToggleSidebar}>toggle</Button>
 			<div className={cls.switchers}>
 				<ThemePicker />
@@ -21,4 +23,4 @@ export function Sidebar() {
 			</div>
 		</div>
 	);
-}
+};

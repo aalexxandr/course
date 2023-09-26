@@ -1,8 +1,8 @@
-import { ThemePicker } from 'widgets/ThemePicker';
+import { FC } from 'react';
 import cls from './style.module.scss';
 import { Link } from 'shared/ui/Link';
 
-export function Navbar() {
+export const Navbar: FC = () => {
 	return (
 		<div className={cls.navbar}>
 			<Link to={'/'} className={cls.navbarLink}>
