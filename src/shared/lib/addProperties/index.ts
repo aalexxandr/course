@@ -4,7 +4,7 @@ export const addProperties = (
 ): string =>
 	[
 		...properties.filter(Boolean),
-		Object.entries(booProperties)
+		...Object.entries(booProperties)
 			.filter(([, value]) => Boolean(value))
 			.map(([property]) => property),
 	].join(' ');

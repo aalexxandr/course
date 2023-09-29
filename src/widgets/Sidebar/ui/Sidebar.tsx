@@ -16,7 +16,7 @@ export const Sidebar = (): JSX.Element => {
 		<div className={
 			addProperties([cls.sidebar], { [cls.closed]: isClosed })
 		}>
-			<Button onClick={onToggleSidebar}>toggle</Button>
+			<Button onClick={onToggleSidebar} className='text'>toggle</Button>
 			<div className={cls.switchers}>
 				<ThemePicker />
 				<LanguagePicker />

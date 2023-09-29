@@ -4,7 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import 'shared/config/i18n';
 
-const root = createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement as Element);
+
 root.render(
 	<BrowserRouter>
 		<ThemeProvider>

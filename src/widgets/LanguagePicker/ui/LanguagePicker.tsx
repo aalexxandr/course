@@ -9,5 +9,7 @@ export const LanguagePicker: FC = () => {
 		await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
 	}
 
-	return <Button onClick={toggleLanguage}>{t('language')}</Button>;
+	return <Button onClick={toggleLanguage} className='text'>
+		{t('language')}
+	</Button>;
 };
