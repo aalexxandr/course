@@ -6,7 +6,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	theme?: EButtonTheme;
 }
 
-enum EButtonTheme {
+export enum EButtonTheme {
 	CLEAR = 'clear',
 }
 export const Button: FC<ButtonProps> = props => {
