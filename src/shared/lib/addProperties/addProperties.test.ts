@@ -1,4 +1,4 @@
-import { addProperties } from './index';
+import { addProperties } from 'shared/lib/addProperties';
 
 describe('addProperties', () => {
 	test('should be properties from array', () => {
