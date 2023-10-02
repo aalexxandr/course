@@ -1,4 +1,4 @@
-import webpack, { Configuration } from 'webpack';
+import { Configuration } from 'webpack';
 import webpackConfig from './configs/webpack';
 import { IEnv, IPaths } from './configs/webpack/types';
 import path from 'path';

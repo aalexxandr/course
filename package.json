@@ -8,7 +8,9 @@
 		"build:prod": "npx webpack --env MODE=production",
 		"build:dev": "npx webpack --env MODE=development",
 		"test": "jest --config ./configs/jest/jest.config.ts",
-		"eslint": "npx eslint src"
+		"eslint": "npx eslint src",
+		"eslint:ts": "eslint \"**/*.{ts,tsx}\"",
+		"eslint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
 	},
 	"keywords": [],
 	"author": "",
