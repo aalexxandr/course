@@ -22,7 +22,7 @@ export const Sidebar = (): JSX.Element => {
 				className='text'
 				data-testid='toggleSidebar'
 			>
-				toggle
+				TOGGLE
 			</Button>
 			<div className={cls.switchers}>
 				<ThemePicker />
