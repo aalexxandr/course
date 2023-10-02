@@ -10,7 +10,4 @@ export default i18n
 	.init({
 		debug: __IS_DEV__,
 		fallbackLng: 'en',
-		interpolation: {
-			escapeValue: false,
-		},
 	});

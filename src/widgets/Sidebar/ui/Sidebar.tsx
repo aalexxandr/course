@@ -13,10 +13,17 @@ export const Sidebar = (): JSX.Element => {
 	};
 
 	return (
-		<div className={
-			addProperties([cls.sidebar], { [cls.closed]: isClosed })
-		}>
-			<Button onClick={onToggleSidebar} className='text'>toggle</Button>
+		<div
+			data-testid='sidebar'
+			className={addProperties([cls.sidebar], { [cls.closed]: isClosed })}
+		>
+			<Button
+				onClick={onToggleSidebar}
+				className='text'
+				data-testid='toggleSidebar'
+			>
+				toggle
+			</Button>
 			<div className={cls.switchers}>
 				<ThemePicker />
 				<LanguagePicker />

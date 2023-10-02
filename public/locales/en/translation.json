@@ -1,4 +1,12 @@
 {
 	"language": "Русский",
-	"pageNotFound": "Page is not found"
+	"pageNotFound": "Page is not found",
+	"Navbar": {
+		"main": "Main",
+		"about": "About"
+	},
+	"PageError": {
+		"title": "Something went wrong",
+		"reloadPage": "Reload page"
+	}
 }

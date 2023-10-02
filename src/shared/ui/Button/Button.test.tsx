@@ -1,14 +1,15 @@
+import { t } from 'i18next';
 import { Button, EButtonTheme } from '.';
 import { render, screen } from '@testing-library/react';
 
 describe('Button tests', () => {
 	test('should be Button in the document', () => {
-		render(<Button>test</Button>);
+		render(<Button>{t('test')}</Button>);
 		expect(screen.getByText('test')).toBeInTheDocument();
 	});
 
 	test('should be clear class in button', () => {
-		render(<Button theme={EButtonTheme.CLEAR}>test</Button>);
+		render(<Button theme={EButtonTheme.CLEAR}>{t('test')}</Button>);
 		expect(screen.getByText('test')).toHaveClass('clear');
 	});
 });

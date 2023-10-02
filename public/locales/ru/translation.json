@@ -1,4 +1,12 @@
 {
 	"language": "English",
-	"pageNotFound": "Страница не найдена"
+	"pageNotFound": "Страница не найдена",
+	"Navbar": {
+		"main": "Главная",
+		"about": "О Компании"
+	},
+	"PageError": {
+		"title": "что-то пошло не так",
+		"reloadPage": "Перезагрузить станицу"
+	}
 }
