@@ -9,7 +9,8 @@
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"prettier",
-		"plugin:i18next/recommended"
+		"plugin:i18next/recommended",
+		"plugin:storybook/recommended"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -27,11 +28,18 @@
 				"allowExpressions": true
 			}
 		],
-		"max-len": ["warn", { "code": 100, "ignoreComments": true }],
+		"max-len": [
+			"warn",
+			{
+				"code": 100,
+				"ignoreComments": true
+			}
+		],
 		"import/prefer-default-export": "off",
 		"react/prop-types": "off",
 		"react/jsx-uses-react": "off",
-		"react/react-in-jsx-scope": "off"
+		"react/react-in-jsx-scope": "off",
+		"react/display-name": "off"
 	},
 	"settings": {
 		"react": {
