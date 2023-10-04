@@ -1,8 +1,10 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import cls from './style.module.scss';
 import { FC } from 'react';
 
 export const PageError: FC = () => {
+	const { t } = useTranslation();
+
 	const onReload = (): void => {
 		location.reload();
 	};
