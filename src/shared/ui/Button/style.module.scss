@@ -1,6 +1,7 @@
 .appButton {
 	color: var(--primary-color);
 	cursor: pointer;
+	padding: 5px 12px;
 }
 
 .clear {
@@ -12,8 +13,31 @@
 }
 
 .outlined {
-	padding: 5px 12px;
 	border: 1px solid var(--primary-color);
 	color: var(--primary-color);
 	background: transparent;
+}
+
+.background {
+	background: var(--bg-color);
+	border: none;
+	color: var(--primary-color);
+}
+
+.invertedBackground {
+	border: none;
+	background: var(--inverted-bg-color);
+	color: var(--inverted-primary-color);
+}
+
+.sizeM {
+	font: var(--font-m);
+}
+
+.sizeL {
+	font: var(--font-l);
+}
+
+.sizeXL {
+	font: var(--font-xl);
 }

@@ -1,12 +1,12 @@
 .sidebar {
-	width: 300px;
+	width: var(--sidebar-width);
 	height: calc(100vh - var(--navbar-height));
 	background-color: var(--inverted-bg-color);
 	position: relative;
 	transition: width 0.3s;
 
 	&.closed {
-		width: 80px;
+		width: var(--sidebar-closed-width);
 	}
 
 	.switchers {
@@ -16,5 +16,14 @@
 		position: absolute;
 		bottom: 15px;
 		width: 100%;
+	}
+	
+	.toggleButton {
+		position: absolute;
+		right: -35px;
+		bottom: 35px;
+		width: 35px;
+		height: 35px;
+		padding: 0;
 	}
 }

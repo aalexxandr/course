@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import cls from './style.module.scss';
 import { addProperties } from 'shared/lib/addProperties';
-import { Button } from 'shared/ui/Button';
+import { Button, EButtonSize, EButtonTheme } from 'shared/ui/Button';
 import { ThemePicker } from 'widgets/ThemePicker';
 import { LanguagePicker } from 'widgets/LanguagePicker';
 
@@ -19,10 +19,12 @@ export const Sidebar = (): JSX.Element => {
 		>
 			<Button
 				onClick={onToggleSidebar}
-				className='text'
+				className={cls.toggleButton}
 				data-testid='toggleSidebar'
+				theme={EButtonTheme.INVERTED_BACKGROUND}
+				size={EButtonSize.L}
 			>
-				TOGGLE
+				{isClosed ? '>' : '<'}
 			</Button>
 			<div className={cls.switchers}>
 				<ThemePicker />

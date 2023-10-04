@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, EButtonTheme } from '.';
+import { Button, EButtonSize, EButtonTheme } from '.';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { ETheme } from 'app/providers/ThemeProvider';
@@ -34,3 +34,43 @@ export const OutlinedDark: Story = {
 };
 
 OutlinedDark.decorators = [ThemeDecorator(ETheme.DARK)];
+
+
+export const Background: Story = {
+	args: {
+		children: 'text',
+		theme: EButtonTheme.INVERTED_BACKGROUND,
+	},
+};
+Background.decorators = [ThemeDecorator(ETheme.DARK)];
+
+export const InvertedBackground: Story = {
+	args: {
+		children: 'text',
+		theme: EButtonTheme.INVERTED_BACKGROUND,
+	},
+};
+
+export const SizeM: Story = {
+	args: {
+		children: 'text',
+		size: EButtonSize.M,
+		theme: EButtonTheme.INVERTED_BACKGROUND
+	},
+};
+
+export const SizeL: Story = {
+	args: {
+		children: 'text',
+		size: EButtonSize.L,
+		theme: EButtonTheme.INVERTED_BACKGROUND
+	},
+};
+
+export const SizeXL: Story = {
+	args: {
+		children: 'text',
+		size: EButtonSize.XL,
+		theme: EButtonTheme.INVERTED_BACKGROUND
+	},
+};
