@@ -17,7 +17,7 @@
 		bottom: 15px;
 		width: 100%;
 	}
-	
+
 	.toggleButton {
 		position: absolute;
 		right: -35px;
@@ -25,5 +25,28 @@
 		width: 35px;
 		height: 35px;
 		padding: 0;
+	}
+
+	.menu {
+		.item {
+			margin-left: 20px;
+			margin-top: 10px;
+			display: flex;
+			align-items: center;
+			min-height: var(--font-line-m);
+
+			svg {
+				fill: var(--inverted-secondary-color);
+			}
+
+			.linkText {
+				margin-left: 5px;
+			}
+
+			&.center {
+				margin-left: 0;
+				justify-content: center;
+			}
+		}
 	}
 }

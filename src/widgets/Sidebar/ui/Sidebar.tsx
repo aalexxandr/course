@@ -4,8 +4,14 @@ import { addProperties } from 'shared/lib/addProperties';
 import { Button, EButtonSize, EButtonTheme } from 'shared/ui/Button';
 import { ThemePicker } from 'widgets/ThemePicker';
 import { LanguagePicker } from 'widgets/LanguagePicker';
+import { Link } from 'shared/ui/Link';
+import { useTranslation } from 'react-i18next';
+import AboutIcon from 'shared/assets/icons/about.svg';
+import MainIcon from 'shared/assets/icons/main.svg';
 
 export const Sidebar = (): JSX.Element => {
+	const { t } = useTranslation();
+
 	const [isClosed, setIsClosed] = useState(false);
 
 	const onToggleSidebar = (): void => {
@@ -17,6 +23,27 @@ export const Sidebar = (): JSX.Element => {
 			data-testid='sidebar'
 			className={addProperties([cls.sidebar], { [cls.closed]: isClosed })}
 		>
+			<div className={cls.menu}>
+				<Link
+					to={'/'}
+					className={addProperties([cls.item], { [cls.center]: isClosed })}
+				>
+					<MainIcon />
+					{!isClosed && (
+						<span className={cls.linkText}>{t('Navbar.main')}</span>
+					)}
+				</Link>
+				<Link
+					to='/about'
+					className={addProperties([cls.item], { [cls.center]: isClosed })}
+				>
+					<AboutIcon />
+					{!isClosed && (
+						<span className={cls.linkText}>{t('Navbar.about')}</span>
+					)}
+				</Link>
+			</div>
+
 			<Button
 				onClick={onToggleSidebar}
 				className={cls.toggleButton}
