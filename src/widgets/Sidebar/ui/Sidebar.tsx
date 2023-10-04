@@ -8,6 +8,7 @@ import { Link } from 'shared/ui/Link';
 import { useTranslation } from 'react-i18next';
 import AboutIcon from 'shared/assets/icons/about.svg';
 import MainIcon from 'shared/assets/icons/main.svg';
+import { RouterPaths } from 'shared/config/routerConfig/routerConfig';
 
 export const Sidebar = (): JSX.Element => {
 	const { t } = useTranslation();
@@ -25,21 +26,21 @@ export const Sidebar = (): JSX.Element => {
 		>
 			<div className={cls.menu}>
 				<Link
-					to={'/'}
+					to={RouterPaths.main}
 					className={addProperties([cls.item], { [cls.center]: isClosed })}
 				>
 					<MainIcon />
 					{!isClosed && (
-						<span className={cls.linkText}>{t('Navbar.main')}</span>
+						<span className={cls.linkText}>{t('Sidebar.main')}</span>
 					)}
 				</Link>
 				<Link
-					to='/about'
+					to={RouterPaths.about}
 					className={addProperties([cls.item], { [cls.center]: isClosed })}
 				>
 					<AboutIcon />
 					{!isClosed && (
-						<span className={cls.linkText}>{t('Navbar.about')}</span>
+						<span className={cls.linkText}>{t('Sidebar.about')}</span>
 					)}
 				</Link>
 			</div>

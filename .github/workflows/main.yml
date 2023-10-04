@@ -1,7 +1,7 @@
 name: Linting, testing, building
 on:
   push:
-    branches: [master]
+    branches: [master, develop]
   pull_request:
     branches: [master, develop]
 jobs:
@@ -23,12 +23,20 @@ jobs:
 
       - name: Build production project
         run: npm run build:prod
+        if: always()
 
       - name: Linting typescript
         run: npm run lint:ts
+        if: always()
 
       - name: Linting css
         run: npm run lint:scss
+        if: always()
 
       - name: Unit testing
         run: npm run test:unit
+        if: always()
+      
+      - name: UI testing
+        run: npm run test:ui
+        if: always()
