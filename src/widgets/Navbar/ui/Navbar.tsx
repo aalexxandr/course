@@ -3,6 +3,7 @@ import cls from './style.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Button, EButtonTheme } from 'shared/ui/Button';
 import Modal from 'shared/ui/Modal';
+import Portal from 'shared/ui/Portal';
 
 export const Navbar: FC = () => {
 	const { t } = useTranslation();
@@ -19,9 +20,11 @@ export const Navbar: FC = () => {
 
 	return (
 		<div className={cls.navbar}>
-			<Modal onClose={onAuthModalClose} isOpen={isAuthModalOpen}>
-				123123
-			</Modal>
+			<Portal>
+				<Modal onClose={onAuthModalClose} isOpen={isAuthModalOpen}>
+					123123
+				</Modal>
+			</Portal>
 			<Button theme={EButtonTheme.CLEAR_INVERTED} onClick={onAuthModalOpen}>
 				{t('signIn')}
 			</Button>

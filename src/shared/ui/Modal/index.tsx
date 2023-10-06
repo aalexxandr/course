@@ -61,19 +61,17 @@ const Modal: FC<IModal> = ({
 	}, [isOpen, onKeyDown]);
 
 	return (
-		<Portal>
-			<div
-				className={addProperties([cls.Modal, className], {
-					[cls.open]: isOpen,
-					[cls.closing]: isClosing,
-				})}
-			>
-				<div className={cls.overlay} onClick={onCloseWithTimer} />
-				<div className={cls.content} onClick={stopPropagation}>
-					{children}
-				</div>
+		<div
+			className={addProperties([cls.Modal, className], {
+				[cls.open]: isOpen,
+				[cls.closing]: isClosing,
+			})}
+		>
+			<div className={cls.overlay} onClick={onCloseWithTimer} />
+			<div className={cls.content} onClick={stopPropagation}>
+				{children}
 			</div>
-		</Portal>
+		</div>
 	);
 };
 
