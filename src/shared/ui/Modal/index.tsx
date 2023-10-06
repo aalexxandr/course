@@ -9,7 +9,6 @@ import {
 import cls from './style.module.scss';
 import { addProperties } from 'shared/lib/addProperties';
 import { MouseEvent } from 'react';
-import Portal from '../Portal';
 
 interface IModal extends PropsWithChildren {
 	className?: string;
