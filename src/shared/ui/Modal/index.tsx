@@ -9,6 +9,7 @@ import {
 import cls from './style.module.scss';
 import { addProperties } from 'shared/lib/addProperties';
 import { MouseEvent } from 'react';
+import Portal from '../Portal';
 
 interface IModal extends PropsWithChildren {
 	className?: string;
@@ -60,18 +61,20 @@ const Modal: FC<IModal> = ({
 	}, [isOpen, onKeyDown]);
 
 	return (
-		<div
-			className={addProperties([cls.Modal, className], {
-				[cls.open]: isOpen,
-				[cls.closing]: isClosing,
-			})}
-		>
-			<div className={cls.overlay} onClick={onCloseWithTimer}>
-				<div className={cls.content} onClick={stopPropagation}>
-					{children}
+		<Portal>
+			<div
+				className={addProperties([cls.Modal, className], {
+					[cls.open]: isOpen,
+					[cls.closing]: isClosing,
+				})}
+			>
+				<div className={cls.overlay} onClick={onCloseWithTimer}>
+					<div className={cls.content} onClick={stopPropagation}>
+						{children}
+					</div>
 				</div>
 			</div>
-		</div>
+		</Portal>
 	);
 };
 

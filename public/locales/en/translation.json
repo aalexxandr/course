@@ -8,5 +8,6 @@
 	"PageError": {
 		"title": "Something went wrong",
 		"reloadPage": "Reload page"
-	}
+	},
+	"signIn": "Sign in"
 }

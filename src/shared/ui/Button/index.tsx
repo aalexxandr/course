@@ -9,9 +9,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export enum EButtonTheme {
 	CLEAR = 'clear',
+	CLEAR_INVERTED = 'clearInverted',
 	OUTLINED = 'outlined',
 	BACKGROUND = 'background',
-	INVERTED_BACKGROUND = 'invertedBackground'
+	INVERTED_BACKGROUND = 'invertedBackground',
 }
 
 export enum EButtonSize {
@@ -31,7 +32,12 @@ export const Button: FC<ButtonProps> = props => {
 
 	return (
 		<button
-			className={addProperties([className, cls[theme], cls.appButton, cls[size]])}
+			className={addProperties([
+				className,
+				cls[theme],
+				cls.appButton,
+				cls[size],
+			])}
 			{...otherProps}
 		>
 			{children}

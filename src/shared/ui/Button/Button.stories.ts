@@ -19,6 +19,13 @@ export const Clear: Story = {
 	},
 };
 
+export const ClearInverted: Story = {
+	args: {
+		children: 'text',
+		theme: EButtonTheme.CLEAR_INVERTED,
+	},
+};
+
 export const Outlined: Story = {
 	args: {
 		children: 'text',
@@ -34,7 +41,6 @@ export const OutlinedDark: Story = {
 };
 
 OutlinedDark.decorators = [ThemeDecorator(ETheme.DARK)];
-
 
 export const Background: Story = {
 	args: {
@@ -55,7 +61,7 @@ export const SizeM: Story = {
 	args: {
 		children: 'text',
 		size: EButtonSize.M,
-		theme: EButtonTheme.INVERTED_BACKGROUND
+		theme: EButtonTheme.INVERTED_BACKGROUND,
 	},
 };
 
@@ -63,7 +69,7 @@ export const SizeL: Story = {
 	args: {
 		children: 'text',
 		size: EButtonSize.L,
-		theme: EButtonTheme.INVERTED_BACKGROUND
+		theme: EButtonTheme.INVERTED_BACKGROUND,
 	},
 };
 
@@ -71,6 +77,6 @@ export const SizeXL: Story = {
 	args: {
 		children: 'text',
 		size: EButtonSize.XL,
-		theme: EButtonTheme.INVERTED_BACKGROUND
+		theme: EButtonTheme.INVERTED_BACKGROUND,
 	},
 };
