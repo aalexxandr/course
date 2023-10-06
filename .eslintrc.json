@@ -41,5 +41,13 @@
 		"react": {
 			"version": "detect"
 		}
-	}
+	},
+	"overrides": [
+		{
+			"files": ["**/*.stories.tsx"],
+			"rules": {
+				"max-len": "off"
+			}
+		}
+	]
 }

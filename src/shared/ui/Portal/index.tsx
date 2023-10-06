@@ -6,7 +6,7 @@ interface IPortalProps extends PropsWithChildren {
 }
 const Portal: FC<IPortalProps> = ({
 	children,
-	element = document.getElementById('app')!,
+	element = document.getElementById('app'),
 }) => {
 	const [domReady, setDomReady] = useState(false);
 
@@ -14,7 +14,9 @@ const Portal: FC<IPortalProps> = ({
 		setDomReady(true);
 	}, []);
 
-	return domReady ? createPortal(children, element) : null;
+	const container = element || document.body;
+
+	return domReady ? createPortal(children, container) : null;
 };
 
 export default Portal;

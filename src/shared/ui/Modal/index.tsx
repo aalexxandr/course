@@ -68,10 +68,9 @@ const Modal: FC<IModal> = ({
 					[cls.closing]: isClosing,
 				})}
 			>
-				<div className={cls.overlay} onClick={onCloseWithTimer}>
-					<div className={cls.content} onClick={stopPropagation}>
-						{children}
-					</div>
+				<div className={cls.overlay} onClick={onCloseWithTimer} />
+				<div className={cls.content} onClick={stopPropagation}>
+					{children}
 				</div>
 			</div>
 		</Portal>
